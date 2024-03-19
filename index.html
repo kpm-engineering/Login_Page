@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+
+<!-- Include the Google Sign-In script -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="334387987591-srbv366vpiim1uo8qgtfak8vnija7qr0.apps.googleusercontent.com">
+
+</head>
+
+<body>
+  <div class="login-form-container">
+    <h2>Login</h2>
+    <form class="login-form" action="" method="post">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      
+      <div class="google">
+      <a href="#" onclick="googleSignIn()">
+            <img src="D:\OneDrive - KPM ENGINEERING PVT LTD\Desktop\figma design\google.png" alt="Google Icon" width="30" height="30">
+      </a>
+      </div>
+
+      <button type="submit" onClick="redirect()">Login</button>
+
+    </form>
+    <p class="registration">
+      Not Registered Yet? <a href="registration.html">Register</a>.
+    </p>
+    <p>
+      <a href="resetpassword.html">Forgot Password?</a>
+    </p>
+  </div>
+
+
+<script>
+function redirect(){
+
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+
+if(username == "zubair.a@kpm-engineering.com" && password == "kpm@2023"){
+    window.location.assign("http://localhost:3000/viewer?iTwinId=39305b06-777d-4478-a8c5-8ea8cd2c3f91&iModelId=2ef34e0a-a325-459f-9ba6-ed53c5c6867e");
+    alert("Login Successfully");
+}
+else{
+    alert("Invalid Credentials");
+    return;
+}
+}
+
+
+// Function to redirect to Google login page
+        function googleSignIn() {
+            // Redirect to Google login page
+            window.location.href = "https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Fsjid%3D3788520851580791384-AP&ec=GAlAwAE&hl=en&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-368688636%3A1709296034377330&theme=glif";
+        }
+
+
+</script>
+</body>
+
+</html>

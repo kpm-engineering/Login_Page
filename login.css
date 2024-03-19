@@ -1,0 +1,105 @@
+/* General Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+
+.login-form-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    background: hwb(0 97% 3% / 0.8);
+    backdrop-filter: blur(40px); /* Increased blur to 15px */
+    background-color: #0096c7;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.form-group input {
+    width: 100%; /* Ensure equal input lengths */
+    padding: 10px 20px; /* Adjust padding for consistent appearance */
+    border: none; /* Remove border for glass effect */
+    border-radius: 5px;
+    background: transparent; /* Let glass background shine through */
+    color: #333; /* Set text color */
+    font-size: 16px; /* Consistent font size */
+
+    /* Optional: Add subtle border for better readability */
+    box-shadow: inset 0 0 0 1px #ddd;
+}
+
+/* Button Styles */
+button[type="submit"] {
+    background-color: #fb8500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    align-items: center;
+}
+
+button[type="submit"]:hover {
+    background-color: #ffb703;
+}
+
+/* Font Awesome icons (optional) */
+input[type="email"]:before {
+    content: "\f0e0";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+input[type="password"]:before {
+    content: "\f023";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+p {
+    text-align: center;
+    color: #fff;
+}
+
+h2 {
+    color: #fff;
+}
+
+label {
+    color: #fff; 
+}
+
+.google{
+    margin-right: 190px;
+}
